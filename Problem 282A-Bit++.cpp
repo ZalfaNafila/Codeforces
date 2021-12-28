@@ -10,7 +10,7 @@ int main(){
 	for (int i=0; i<n; i++){
 		
 		cin >> symb;
-		if (symb[1] == '+'){
+		if (symb[1] == '+'){ //because the symbol of + was on the 2nd character of input (means it was on the 1 [0,1,2])
 			x++;
 		}
 		else if (symb[1] == '-'){
