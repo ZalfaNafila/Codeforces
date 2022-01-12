@@ -1,26 +1,26 @@
-// link : https://codeforces.com/contest/236/problem/A
-
-#include <iostream>
-#include <math.h>
 #include <bits/stdc++.h>
-
+ 
 using namespace std;
-
+ 
 int main(){
 	ios_base::sync_with_stdio(false);
-    cin.tie(0);
+    	cin.tie(0);
     
-    int n,a,b;
+    string n;
     cin >> n;
-    for (int i=0; i<n; i++){
-    	cin >> a >> b;
-			if(a % b == 0){
-				cout << "0" <<"\n";
-				}
-			else{
-				int c = b - a%b;
-				cout << c << "\n";
-			}
+    int a = n.size();
+    int sum = 0,b;
+    
+	sort(&n[0],&n[a]);
+    for(int i=0; i<a; i++){
+    	if (n[i] != n[i+1]){
+    		sum++;
 		}
 	}
-		
+	if(sum % 2 == 0){
+		cout << "CHAT WITH HER!";
+	}
+	else {
+		cout << "IGNORE HIM!";
+	}
+}
